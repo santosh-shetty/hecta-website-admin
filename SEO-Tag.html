@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tag-input {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .tag {
+            background-color: #007bff;
+            color: #fff;
+            padding: 3px 8px;
+            margin: 2px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tag-input">
+        <input type="text" id="tagInput" placeholder="Enter tags..." />
+        <div class="tag-list" id="tagList"></div>
+    </div>
+
+
+
+    <script>
+        const tagInput = document.getElementById("tagInput");
+        const tagList = document.getElementById("tagList");
+
+        tagInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === ",") {
+                event.preventDefault();
+                addTag(tagInput.value.trim());
+                tagInput.value = "";
+            }
+        });
+
+        function addTag(tagName) {
+            if (tagName === "") return;
+
+            const tagElement = document.createElement("div");
+            tagElement.classList.add("tag");
+            tagElement.textContent = tagName;
+
+            tagElement.addEventListener("click", function () {
+                tagList.removeChild(tagElement);
+            });
+
+            tagList.appendChild(tagElement);
+        }
+
+        // Initial tags (if editing a post)
+        const initialTags = ["web development", "coding"]; // Replace with your initial tags
+
+        initialTags.forEach((tag) => addTag(tag));
+
+    </script>
+</body>
+
+</html>

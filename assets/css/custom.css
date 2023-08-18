@@ -1,0 +1,17 @@
+/* Start CSS for SEO Tag  */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.tag {
+    background-color: #00BBBB;
+    color: #fff;
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* End CSS for SEO Tag  */
