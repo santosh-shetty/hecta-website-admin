@@ -11,6 +11,10 @@
 <!-- Select -->
 <script src="assets/js/nice-select2.js"></script>
 <script src="assets/js/easymde.min.js"></script>
+    <!-- File Upload -->
+<script src="assets/js/file-upload-with-preview.iife.js"></script>
+<!-- Editor -->
+<script src="assets/js/quill.js"></script>
 <script>
     document.addEventListener('alpine:init', () => {
         // main section
