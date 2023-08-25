@@ -19,10 +19,10 @@
                 <!-- start main content section -->
                 <ul class="flex space-x-2 rtl:space-x-reverse pb-5 ">
                     <li>
-                        <a href="javascript:;" class="text-primary hover:underline">Product</a>
+                        <a href="javascript:;" class="text-primary hover:underline">Property</a>
                     </li>
                     <li class="before:content-['/'] ltr:before:mr-1 rtl:before:ml-1">
-                        <span>Add Product</span>
+                        <span>Add Property</span>
                     </li>
                 </ul>
                 <form action="#" method="post">
@@ -60,18 +60,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="PropertyExcerpt ">Property Excerpt </label>
-                                    <input id="PropertyExcerpt " type="text" placeholder="Enter Property Excerpt "
-                                        class="form-input" required />
+                                    <!-- <input id="PropertyExcerpt " type="text" placeholder="Enter Property Excerpt "
+                                        class="form-input" required /> -->
+                                    <textarea rows="1"
+                                        class="form-textarea"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label class="inline-flex mr-2">
-                                        <label for="displayTo" class="mr-3">Display to </label>
-                                        <input type="radio" name="displayTo" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark mr-3">Active</span>
-
-                                        <input type="radio" name="displayTo" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark">Inactive</span>
-                                    </label>
+                                    <label for="displayTo">Display to </label>
+                                    <select class="selectize">
+                                        <option selected value="Everyone">Everyone</option>
+                                        <option value="loggedInUsersOnly">Logged in users only</option>
+                                        <option value="SubscriptionUsersOnly">Subscription users only</option>
+                                    </select>
                                 </div>
                             </div>
 
@@ -88,27 +88,16 @@
                         </div>
                         <div class="mb-5">
                             <div class="grid grid-cols-1 gap-6 pt-5 lg:grid-cols-2">
-
                                 <div class="form-group">
-                                    <label class="inline-flex mr-2">
-                                        <label for="possessionStatus" class="mr-3">Possession Status </label>
-                                        <input type="radio" name="possessionStatus" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark mr-3">Active</span>
-
-                                        <input type="radio" name="possessionStatus" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark">Inactive</span>
-                                    </label>
+                                    <label for="displayTo">Possession Status</label>
+                                    <select class="selectize">
+                                        <option selected value="PhysicalPossession">Physical Possession</option>
+                                        <option value="SymbolicPossession">Symbolic Possession</option>
+                                        <option value="ConstructivePossession">Constructive Possession</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
                                 </div>
-                                <div class="form-group">
-                                    <label class="inline-flex mr-2">
-                                        <label for="auctionType" class="mr-3">Auction Type </label>
-                                        <input type="radio" name="auctionType" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark mr-3">Active</span>
 
-                                        <input type="radio" name="auctionType" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark">Inactive</span>
-                                    </label>
-                                </div>
                                 <div class="form-group">
                                     <label for="proName">Possession Date</label>
                                     <input id="proName" type="date" placeholder="Enter Possession Date"
@@ -130,10 +119,34 @@
                                     <input id="proPrice" type="date" placeholder="Enter Auction End Date Time"
                                         class="form-input" required />
                                 </div>
+
                                 <div class="form-group">
                                     <label for="proPrice">Reserve Price</label>
                                     <input id="proPrice" type="number" placeholder="Enter Reserve Price"
                                         class="form-input" required />
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label class="inline-flex mr-2">
+                                        <label for="auctionType" class="mr-3">Auction Type </label>
+                                        <input type="radio" name="auctionType" class="form-radio text-dark peer" />
+                                        <span class="peer-checked:text-dark mr-3">Active</span>
+
+                                        <input type="radio" name="auctionType" class="form-radio text-dark peer" />
+                                        <span class="peer-checked:text-dark">Inactive</span>
+                                    </label>
+                                </div> -->
+                                <div class="form-group">
+                                    <label class="inline-flex ">
+                                        <label for="EMDPaymentProcess">Auction Type</label>
+                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
+                                        <span>Open</span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="inline-flex">
+                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
+                                        <label for="EMDPaymentProcess">Is Auctionable</label>
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="proPrice">Application End Date</label>
@@ -172,27 +185,6 @@
                                         class="form-input" required />
                                 </div>
 
-
-                                <div class="form-group">
-                                    <label class="inline-flex mr-2">
-                                        <label for="possessionStatus" class="mr-3">Trending Property </label>
-                                        <input type="radio" name="possessionStatus" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark mr-3">Active</span>
-
-                                        <input type="radio" name="possessionStatus" class="form-radio text-dark peer" />
-                                        <span class="peer-checked:text-dark">Inactive</span>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <label class="inline-flex">
-                                        <label for="EMDPaymentProcess">Is Auctionable</label>
-                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                        <span>Dark</span>
-                                        <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                        <span>Dark</span>
-                                    </label>
-                                </div>
-
                                 <div class="form-group">
                                     <label for="EMDPaymentProcess">EMD Payment Process</label>
                                     <input id="EMDPaymentProcess" type="text" placeholder="Enter EMD Payment Process"
@@ -208,6 +200,17 @@
                                     <label for="inspectionEndTime">Inspection End Time</label>
                                     <input id="inspectionEndTime" type="date" placeholder="Enter Inspection End Time"
                                         class="form-input" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="inline-flex mr-2">
+                                        <label for="TrendingProperty" class="mr-3">Trending Property </label>
+                                        <input type="radio" name="TrendingProperty" class="form-radio text-dark peer" />
+                                        <span class="peer-checked:text-dark mr-3">False</span>
+
+                                        <input type="radio" name="TrendingProperty" class="form-radio text-dark peer" />
+                                        <span class="peer-checked:text-dark">True</span>
+                                    </label>
                                 </div>
 
                             </div>
@@ -307,16 +310,14 @@
                                 <input id="Street" type="text" placeholder="Enter Street" class="form-input" required />
                             </div>
 
-
                             <div class="form-group">
                                 <label class="inline-flex">
-                                    <label for="EMDPaymentProcess">Is it an approximate location</label>
-                                    <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                    <span>Test 1 </span>
-                                    <input type="checkbox" class="form-checkbox text-dark rounded-full ml-3" />
-                                    <span>Test 2</span>
+                                    <input type="checkbox" id="approximateLocation"
+                                        class="form-checkbox text-dark rounded-full ml-3" />
+                                    <label for="approximateLocation">Is it an approximate location</label>
                                 </label>
                             </div>
+
                             <div class="form-group">
                                 <label for="Nearby Locations">Nearby Locations</label>
                                 <input id="Nearby Locations" type="text" placeholder="Enter Nearby Locations"
@@ -334,7 +335,7 @@
                         </div>
                         <div class="grid grid-cols-1 gap-6 pt-5 lg:grid-cols-2 mb-5">
                             <div class="form-group">
-                                <label for="state">Bank Name</label>
+                                <label for="BankName">Bank Name</label>
                                 <select class="selectize">
                                     <option selected value="Delhi">SBI</option>
                                     <option value="Maharashtra">KOTAK BANK</option>
@@ -370,16 +371,16 @@
                             </div>
 
 
-
                             <div class="form-group">
-                                <label class="inline-flex mr-2">
-                                    <label for="displayTo" class="mr-3">Institution Type </label>
-                                    <input type="radio" name="displayTo" class="form-radio text-dark peer" />
-                                    <span class="peer-checked:text-dark mr-3">Active</span>
-
-                                    <input type="radio" name="displayTo" class="form-radio text-dark peer" />
-                                    <span class="peer-checked:text-dark">Inactive</span>
-                                </label>
+                                <label for="InstitutionType">Institution Type</label>
+                                <select class="selectize">
+                                    <option selected value="PublicSector">Public Sector</option>
+                                    <option value="PrivateSector">Private Sector</option>
+                                    <option value="NBFC">NBFC</option>
+                                    <option value="HousingFinance">Housing Finance</option>
+                                    <option value="StateFinancialCorporation">State Financial Corporation</option>
+                                    <option value="Co-Operative">Co-Operative</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -394,8 +395,8 @@
                             <div class="form-group">
                                 <label for="state">Is Loan Available</label>
                                 <select class="selectize">
-                                    <option selected value="option1">Option 1</option>
-                                    <option selected value="option2">Option 2</option>
+                                    <option selected value="Yes">Yes</option>
+                                    <option value="No">No</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -481,7 +482,7 @@
                     <!-- Start SEO -->
                     <div class="panel mt-5">
                         <div class="mb-2  flex items-center justify-between">
-                            <h5 class="text-lg font-semibold dark:text-white-light">Property Information</h5>
+                            <h5 class="text-lg font-semibold dark:text-white-light">SEO Information</h5>
                         </div>
                         <div class="mb-5">
 
