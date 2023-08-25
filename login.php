@@ -23,11 +23,11 @@
                         <div class="absolute inset-y-0 w-8 from-primary/10 via-transparent to-transparent ltr:-right-10 ltr:bg-gradient-to-r rtl:-left-10 rtl:bg-gradient-to-l xl:w-16 ltr:xl:-right-20 rtl:xl:-left-20">
                         </div>
                         <div class="ltr:xl:-skew-x-[14deg] rtl:xl:skew-x-[14deg]">
-                            <a href="index.html" class="block w-48 lg:w-72 ms-10">
-                                <img src="assets/imagess/hecta-logo.svg" alt="Logo" class="w-full" />
+                            <a href="index.php" class="block w-48 lg:w-72 ms-10">
+                                <img src="assets/imagess/hecta-logo.svg" alt="Logo" class="w-full" style="width: 80%;" />
                             </a>
                             <div class="mt-24 hidden w-full max-w-[430px] lg:block">
-                                <img src="assets/images/auth/login.svg" alt="Cover Image" class="w-full" />
+                                <img src="assets/imagess/LoginImages.svg" alt="Cover Image" class="w-full" />
                             </div>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
                             </div> -->
                             <div class="text-center dark:text-white my-2">
                                 Don't have an account ?
-                                <a href="auth-cover-register.html" class="uppercase text-primary underline transition hover:text-black dark:hover:text-white">SIGN
+                                <a href="register.php" class="uppercase text-primary underline transition hover:text-black dark:hover:text-white">SIGN
                                     UP</a>
                             </div>
                         </div>

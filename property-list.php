@@ -26,80 +26,200 @@
                 <!-- start main content section -->
                 <div x-data="todolist">
                     <div class="add-product">
-                        <h2 class="text-xl">Properties</h2>
+                        <h2 class="text-xl color-element1">Properties</h2>
                     </div>
-                    <div class="all-properties">
-                        <div class="properties">
-                            <ul>
-                                <li>
-                                    <h4>All Properties(6,000)</h4>
-                                </li>
-                                <li>
-                                    <a href="#">Published(5,000)</a>
-                                </li>
-                                <li>
-                                    <h4>All Properties(6,000)</h4>
-                                </li>
-                                <li>
-                                    <h4>All Properties(6,000)</h4>
-                                </li>
-                            </ul>
+                    <div class="all-properties  flex justify-between items-center">
+                        <ul class="horizontal-list">
+                            <li class="color-element1">
+                                <h4>All Properties(6,000)</h4>
+                            </li>
+                            <li class="divider">|</li>
+                            <li class="color-element2">
+                                Published(5,000)
+                            </li>
+                            <li class="divider">|</li>
+                            <li class="color-element2">
+                                <h4>Unpublished(6,000)</h4>
+                            </li>
+                            <li class="divider">|</li>
+                            <li class="color-element2">
+                                <h4>Draft(500)</h4>
+                            </li>
+                            <li class="divider">|</li>
+                            <li class="color-element2">
+                                <h4>Trash(250)</h4>
+                            </li>
+                        </ul>
+                        <div class="flex items-center">
+                            <div class="flex space-x-4 mb-2">
+                                <button type="button" class="btn-property">
+                                    Upload
+                                </button>
+                                <button type="button" class="btn-property">
+                                    Bulk Upload
+                                </button>
+                            </div>
                         </div>
-
-                        <button type="button" class="btn btn-primary " ; @click="editUser">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ltr:mr-2 rtl:ml-2">
-                                <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="1.5" />
-                                <path opacity="0.5" d="M18 17.5C18 19.9853 18 22 10 22C2 22 2 19.9853 2 17.5C2 15.0147 5.58172 13 10 13C14.4183 13 18 15.0147 18 17.5Z" stroke="currentColor" stroke-width="1.5" />
-                                <path d="M21 10H19M19 10H17M19 10L19 8M19 10L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-                            </svg>
-                            Add Product
-                        </button>
                     </div>
+                    <div class="sf-properties flex justify-between items-center space-y-4">
+                        <ul class="horizontal-list2 flex items-center space-x-4">
+                            <li>
+                                <div class="group relative flex-1">
+                                    <div class="absolute top-1/2 -translate-y-1/2 peer-focus:text-primary ltr:left-[11px] rtl:right-[11px]">
+                                        <svg fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
+                                            <path d="M7.91667 13.3333C6.40278 13.3333 5.12153 12.809 4.07292 11.7604C3.02431 10.7118 2.5 9.43056 2.5 7.91667C2.5 6.40278 3.02431 5.12153 4.07292 4.07292C5.12153 3.02431 6.40278 2.5 7.91667 2.5C9.43056 2.5 10.7118 3.02431 11.7604 4.07292C12.809 5.12153 13.3333 6.40278 13.3333 7.91667C13.3333 8.52778 13.2361 9.10417 13.0417 9.64583C12.8472 10.1875 12.5833 10.6667 12.25 11.0833L16.9167 15.75C17.0694 15.9028 17.1458 16.0972 17.1458 16.3333C17.1458 16.5694 17.0694 16.7639 16.9167 16.9167C16.7639 17.0694 16.5694 17.1458 16.3333 17.1458C16.0972 17.1458 15.9028 17.0694 15.75 16.9167L11.0833 12.25C10.6667 12.5833 10.1875 12.8472 9.64583 13.0417C9.10417 13.2361 8.52778 13.3333 7.91667 13.3333ZM7.91667 11.6667C8.95833 11.6667 9.84375 11.3021 10.5729 10.5729C11.3021 9.84375 11.6667 8.95833 11.6667 7.91667C11.6667 6.875 11.3021 5.98958 10.5729 5.26042C9.84375 4.53125 8.95833 4.16667 7.91667 4.16667C6.875 4.16667 5.98958 4.53125 5.26042 5.26042C4.53125 5.98958 4.16667 6.875 4.16667 7.91667C4.16667 8.95833 4.53125 9.84375 5.26042 10.5729C5.98958 11.3021 6.875 11.6667 7.91667 11.6667Z" fill="#A0A0A0"></path>
+                                        </svg>
+                                    </div>
+                                    <input type="text" class="holder peer form-input ltr:pl-10 rtl:pr-10" placeholder="Search Properties" />
+                                </div>
+                            </li>
+                            <li>
+                                <div class="filter relative inline-block text-left">
+                                    <form>
+                                        <div class="relative inline-block text-left">
+                                            <button type="button" class="dropdown-btn flex items-center justify-between w-full py-2 px-4 rounded-lg bg-white">
+                                                Filter by Property
+                                                <select class="opacity-0 absolute w-full h-full cursor-pointer ">
+                                                    <option>Filter Option 1</option>
+                                                    <option>Filter Option 2</option>
+                                                    <option>Filter Option 3</option>
+                                                </select>
+                                                <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="filter relative inline-block text-left">
+                                    <form>
+                                        <div class="relative inline-block text-left">
+                                            <button type="button" class="dropdown-btn flex items-center justify-between w-full py-2 px-4 rounded-lg bg-white">
+                                                Filter by Budget
+                                                <select class="opacity-0 absolute w-full h-full cursor-pointer ">
+                                                    <option>Filter Option 1</option>
+                                                    <option>Filter Option 2</option>
+                                                    <option>Filter Option 3</option>
+                                                </select>
+                                                <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="filter relative inline-block text-left">
+                                    <form>
+                                        <div class="relative inline-block text-left">
+                                            <button type="button" class="dropdown-btn flex items-center justify-between w-full py-2 px-4 rounded-lg bg-white">
+                                                Filter by Seller Institution
+                                                <select class="opacity-0 absolute w-full h-full cursor-pointer ">
+                                                    <option>Filter Option 1</option>
+                                                    <option>Filter Option 2</option>
+                                                    <option>Filter Option 3</option>
+                                                </select>
+                                                <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="flex items-center space-x-4 mb-2">
+                            <button type="button" class="text-filter btn-filter mb-3">Apply</button>
+                            <button type="button" class="text-filter btn-filter mb-3">Clear</button>
+                        </div>
+                    </div>
+
+
                     <div class="relative flex h-full gap-5 sm:h-[calc(100vh_-_150px)]">
                         <div class="overlay absolute z-[5] hidden h-full w-full rounded-md bg-black/60" :class="{ '!block xl:!hidden': isShowTaskMenu }" @click="isShowTaskMenu = !isShowTaskMenu">
                         </div>
                         <div class="panel h-full flex-1 overflow-auto p-0">
                             <div class="flex h-full flex-col">
-                                <div class="flex w-full flex-col gap-4 p-4 sm:flex-row sm:items-center">
-                                    <div class="flex items-center ltr:mr-3 rtl:ml-3">
-                                        <button type="button" class="block hover:text-primary ltr:mr-3 rtl:ml-3 xl:hidden" @click="isShowTaskMenu = !isShowTaskMenu">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6">
-                                                <path d="M20 7L4 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                                                <path opacity="0.5" d="M20 12L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                                                <path d="M20 17L4 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                                            </svg>
-                                        </button>
-                                        <div class="group relative flex-1">
-                                            <input type="text" class="peer form-input ltr:!pr-10 rtl:!pl-10" placeholder="Search Task..." x-model="searchTask" @keyup="searchTasks()" />
-                                            <div class="absolute top-1/2 -translate-y-1/2 peer-focus:text-primary ltr:right-[11px] rtl:left-[11px]">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4">
-                                                    <circle cx="11.5" cy="11.5" r="9.5" stroke="currentColor" stroke-width="1.5" opacity="0.5"></circle>
-                                                    <path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
-                                                </svg>
-                                            </div>
+                                <!-- <div class="flex w-full flex-col gap-4 p-4 sm:flex-row sm:items-center">
+                                    <div class="flex items-center ltr:mr-3 rtl:ml-3 space-x-4">
+                                        <h6>Showing 1 to 10 of 6,000 entries</h6>
+                                        <div class="filter relative inline-block text-left">
+                                            <form>
+                                                <div class="relative inline-block text-left">
+                                                    <button type="button" class="dropdown-btn flex items-center justify-between w-full py-2 px-4 rounded-lg bg-white">
+                                                        10
+                                                        <select class="opacity-0 absolute w-px h-full cursor-pointer">
+                                                            <option>Filter Option 1</option>
+                                                            <option>Filter Option 2</option>
+                                                            <option>Filter Option 3</option>
+                                                        </select>
+                                                        <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                                    </button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                    <div class="flex flex-1 items-center justify-center sm:flex-auto sm:justify-end">
-                                        <p class="ltr:mr-3 rtl:ml-3" x-text="pager.startIndex+1 + '-' +( pager.endIndex+1) + ' of ' + filteredTasks.length">
-                                        </p>
-                                        <button type="button" :disabled="pager.currentPage == 1" class="rounded-md bg-[#f4f4f4] p-1 enabled:hover:bg-primary-light disabled:cursor-not-allowed disabled:opacity-60 ltr:mr-3 rtl:ml-3 dark:bg-white-dark/20 enabled:dark:hover:bg-white-dark/30" @click="pager.currentPage--,searchTasks(false)">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rtl:rotate-180">
-                                                <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
-                                        <button type="button" :disabled="pager.currentPage == pager.totalPages" class="rounded-md bg-[#f4f4f4] p-1 enabled:hover:bg-primary-light disabled:cursor-not-allowed disabled:opacity-60 dark:bg-white-dark/20 enabled:dark:hover:bg-white-dark/30" @click="pager.currentPage++,searchTasks(false)">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ltr:rotate-180">
-                                                <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg>
-                                        </button>
+                                    <div class="filter relative inline-block text-left">
+                                        <form>
+                                            <div class="relative inline-block text-left">
+                                                <button type="button" class="dropdown-btn flex items-center justify-between w-full py-2 px-4 rounded-lg bg-white">
+                                                    Bulk Actions
+                                                    <select class="opacity-0 absolute w-px h-full cursor-pointer">
+                                                        <option>Filter Option 1</option>
+                                                        <option>Filter Option 2</option>
+                                                        <option>Filter Option 3</option>
+                                                    </select>
+                                                    <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="flex items-center space-x-4 mb-2">
+                                        <button type="button" class="text-filter btn-filter mb-3">Apply</button>
+                                    </div>
+                                </div> -->
+                                <div class="actions-list flex justify-between items-center p-4 space-x-4">
+                                    <div class="flex items-center space-x-4">
+                                        <h6>Showing 1 to 10 of 6,000 entries</h6>
+                                        <div class="filter relative inline-block text-left">
+                                            <form>
+                                                <div class="relative inline-block text-left">
+                                                    <button type="button" class="dropdown-btn flex items-center justify-between py-2 px-4 rounded-lg bg-white">
+                                                        10
+                                                        <select class="opacity-0 absolute w-px h-full cursor-pointer">
+                                                            <option>Filter Option 1</option>
+                                                            <option>Filter Option 2</option>
+                                                            <option>Filter Option 3</option>
+                                                        </select>
+                                                        <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-4">
+                                        <div class="filter relative inline-block text-left">
+                                            <form>
+                                                <div class="relative inline-block text-left">
+                                                    <button type="button" class="dropdown-btn flex items-center justify-between py-2 px-4 rounded-lg bg-white">
+                                                        Bulk Actions
+                                                        <select class="opacity-0 absolute w-px h-full cursor-pointer">
+                                                            <option>Filter Option 1</option>
+                                                            <option>Filter Option 2</option>
+                                                            <option>Filter Option 3</option>
+                                                        </select>
+                                                        <img class="arrow" src="assets/imagess/down-arrow.svg" alt="Dropdown Arrow" />
+                                                    </button>
+                                                    <ul class="dropdown-options absolute hidden mt-2 py-1 bg-white border border-gray-300 shadow-lg rounded-lg">
+                                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Filter Option 1</li>
+                                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Filter Option 2</li>
+                                                        <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Filter Option 3</li>
+                                                    </ul>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <button type="button" class="text-filter btn-filter">Apply</button>
                                     </div>
                                 </div>
-                                <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b]"></div>
-                                <template x-if="pagedTasks.length">
-                                    <div class="table-responsive min-h-[400px] grow overflow-y-auto sm:min-h-[300px]">
-                                        <table class="table-hover">
-                                            <tbody>
-                                                <template x-for="task in pagedTasks">
+                                <!-- <template x-for="task in pagedTasks">
                                                     <tr :key="task.id" class="group cursor-pointer" :class="{ 'bg-white-light/30 dark:bg-[#1a2941]' : task.status === 'complete' }">
                                                         <td class="w-1">
                                                             <input type="checkbox" :id="`chk-${task.id}`" class="form-checkbox" :checked="task.status === 'complete'" @click.stop="taskComplete(task)" :disabled="selectedTab === 'trash'" />
@@ -209,8 +329,8 @@
                                                         </td>
                                                         <td>
                                                             <div @click="viewTask(task)">
-                                                                <div class="whitespace-nowrap text-base font-semibold group-hover:text-primary" :class="{ 'line-through': task.status === 'complete' }" x-text="task.title"></div>
-                                                                <div class="min-w-[300px] overflow-hidden text-white-dark line-clamp-1" :class="{ 'line-through': task.status === 'complete' }" x-text="task.descriptionText"></div>
+                                                                <div class="whitespace-nowrap text-base font-semibold group-hover:text-primary" :class="{ 'line-through': task.status === 'complete' }" x-text="task.reserv_price"></div>
+                                                                <div class="min-w-[300px] overflow-hidden text-white-dark line-clamp-1" :class="{ 'line-through': task.status === 'complete' }" x-text="task.property_title"></div>
                                                             </div>
                                                         </td>
                                                         <td class="w-1">
@@ -224,22 +344,157 @@
                                                             </div>
                                                         </td>
                                                         <td class="w-1">
-                                                            <p class="whitespace-nowrap font-medium text-white-dark" :class="{ 'line-through': task.status === 'complete' }" x-text="task.date"></p>
+                                                            <p class="whitespace-nowrap font-medium text-white-dark" :class="{ 'line-through': task.status === 'complete' }" x-text="task.id"></p>
                                                         </td>
                                                     </tr>
-                                                </template>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </template>
-                                <template x-if="!pagedTasks.length">
-                                    <div class="flex h-full min-h-[400px] items-center justify-center text-lg font-semibold sm:min-h-[300px]">
-                                        No data available
+                                </template> -->
+                                <div class="h-px w-full border-b border-[#e0e6ed] dark:border-[#1b2e4b]"></div>
+                                <template x-if="pagedTasks.length">
+                                    <div class="table-responsive table-auto grow overflow-x-auto">
+                                        <div class="table-auto">
+                                            <table class="table-auto" style="table-layout: auto;">
+
+                                                <thead>
+                                                    <tr>
+                                                        <th><input type="checkbox" :id="`chk-${task.id}`" class="form-checkbox" :checked="task.status === 'complete'" @click.stop="taskComplete(task)" :disabled="selectedTab === 'trash'" /></th>
+                                                        <th>ID</th>
+                                                        <th>Property Title</th>
+                                                        <th>Reserve Price</th>
+                                                        <th>Seller Institution</th>
+                                                        <th>Borrower Name</th>
+                                                        <th>Application End Date</th>
+                                                        <th>Published On</th>
+                                                        <th>Status</th>
+                                                        <th>Actions</th>
+                                                        <th>Lead</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" :id="`chk-${task.id}`" class="form-checkbox" :checked="task.status === 'complete'" @click.stop="taskComplete(task)" :disabled="selectedTab === 'trash'" />
+                                                        </td>
+                                                        <td>
+                                                            37060
+                                                        </td>
+                                                        <td class="whitespace-nowrap">Residential Flat in Kumarapark, Seshadripuram, Bengaluru, Karnataka</td>
+                                                        <td class="whitespace-nowrap">₹ 1,20,00,000</td>
+                                                        <td class="whitespace-nowrap">ICICI Bank</td>
+                                                        <td class="whitespace-nowrap">Atul Vajpayee</td>
+                                                        <td class="whitespace-nowrap">September 5, 2023</td>
+                                                        <td class="whitespace-nowrap">18/08/2023 at 12:17 PM Modified - Published</td>
+                                                        <td class="whitespace-nowrap">
+                                                            <span class="text badge-outline-success">Published</span>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex gap-4 items-center">
+                                                                <button class="btn-primary viewBtn">
+                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary penBtn">
+                                                                    <img src="assets/images/pen.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary menuBtn flex flex-col items-center">
+                                                                    <img src="assets/imagess/Ellipse.svg" class=" ellipse mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-1.svg" class="mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-2.svg" class="mb-0.8" />
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex space-x-4">
+                                                                <button class="btn-view">View</button>
+                                                                <button class="btn-view">Add</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" :id="`chk-${task.id}`" class="form-checkbox" :checked="task.status === 'complete'" @click.stop="taskComplete(task)" :disabled="selectedTab === 'trash'" />
+                                                        </td>
+                                                        <td>
+                                                            37060
+                                                        </td>
+                                                        <td class="whitespace-nowrap">Residential Flat in Kumarapark, Seshadripuram, Bengaluru, Karnataka</td>
+                                                        <td class="whitespace-nowrap">₹ 1,20,00,000</td>
+                                                        <td class="whitespace-nowrap">ICICI Bank</td>
+                                                        <td class="whitespace-nowrap">Atul Vajpayee</td>
+                                                        <td class="whitespace-nowrap">September 5, 2023</td>
+                                                        <td class="whitespace-nowrap">18/08/2023 at 12:17 PM Modified - Published</td>
+                                                        <td class="whitespace-nowrap">
+                                                            <span class="text badge-outline-success">Published</span>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex gap-4 items-center">
+                                                                <button class="btn-primary viewBtn">
+                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary penBtn">
+                                                                    <img src="assets/images/pen.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary menuBtn flex flex-col items-center">
+                                                                    <img src="assets/imagess/Ellipse.svg" class=" ellipse mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-1.svg" class="mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-2.svg" class="mb-0.8" />
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex space-x-4">
+                                                                <button class="btn-view">View</button>
+                                                                <button class="btn-view">Add</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" :id="`chk-${task.id}`" class="form-checkbox" :checked="task.status === 'complete'" @click.stop="taskComplete(task)" :disabled="selectedTab === 'trash'" />
+                                                        </td>
+                                                        <td>
+                                                            37060
+                                                        </td>
+                                                        <td class="whitespace-nowrap">Residential Flat in Kumarapark, Seshadripuram, Bengaluru, Karnataka</td>
+                                                        <td class="whitespace-nowrap">₹ 1,20,00,000</td>
+                                                        <td class="whitespace-nowrap">ICICI Bank</td>
+                                                        <td class="whitespace-nowrap">Atul Vajpayee</td>
+                                                        <td class="whitespace-nowrap">September 5, 2023</td>
+                                                        <td class="whitespace-nowrap">18/08/2023 at 12:17 PM Modified - Published</td>
+                                                        <td class="whitespace-nowrap">
+                                                            <span class="text badge-outline-success">Published</span>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex gap-4 items-center">
+                                                                <button class="btn-primary viewBtn">
+                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary penBtn">
+                                                                    <img src="assets/images/pen.svg" width="20px" />
+                                                                </button>
+                                                                <button class="btn-primary menuBtn flex flex-col items-center">
+                                                                    <img src="assets/imagess/Ellipse.svg" class=" ellipse mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-1.svg" class="mb-0.8" />
+                                                                    <img src="assets/imagess/Ellipse-2.svg" class="mb-0.8" />
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="whitespace-nowrap">
+                                                            <div class="flex space-x-4">
+                                                                <button class="btn-view">View</button>
+                                                                <button class="btn-view">Add</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </template>
                             </div>
-                        </div>
 
+                        </div>
+                    </div>
+                </div>
+                <!-- 
                         <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60 px-4" :class="{'!block':addTaskModal}">
                             <div class="flex min-h-screen items-center justify-center">
                                 <div x-show="addTaskModal" x-transition x-transition.duration.300 @click.outside="addTaskModal = false" class="panel my-8 w-[90%] max-w-lg overflow-hidden rounded-lg border-0 p-0 md:w-full">
@@ -314,19 +569,19 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end main content section -->
-
+                        </div> -->
             </div>
-
-            <!-- start footer section -->
-            <div class="p-6 pt-0 mt-auto text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
-                © <span id="footer-year">2022</span>. HECTA All rights reserved.
-            </div>
-            <!-- end footer section -->
         </div>
+        <!-- end main content section -->
+
+    </div>
+
+    <!-- start footer section -->
+    <div class="p-6 pt-0 mt-auto text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
+        © <span id="footer-year">2022</span>. HECTA All rights reserved.
+    </div>
+    <!-- end footer section -->
+    </div>
     </div>
 
     <script src="assets/js/alpine-collaspe.min.js"></script>
@@ -436,7 +691,7 @@
                 ],
 
                 messages: [{
-                        id: 1,
+                        id: 37060,
                         image: '<span class="grid place-content-center w-9 h-9 rounded-full bg-success-light dark:bg-success text-success dark:text-success-light"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>',
                         title: 'Congratulations!',
                         message: 'Your OS has been updated.',
@@ -622,6 +877,15 @@
                         assignee: 'John Smith',
                         path: 'profile-5.jpeg',
                         status: 'important',
+                    },
+                    {
+                        id: 37060,
+                        property_title: 'Residential Flat in Kumarapark, Seshadripuram, Bengaluru, Karnataka',
+                        reserv_price: 'rs 123434',
+                        seller_institution: 'Bank Name',
+                        borrower_name: 'Atul Vajpayee',
+                        published_on: 'Aug, 03 2020',
+
                     },
                 ],
                 filteredTasks: [],
