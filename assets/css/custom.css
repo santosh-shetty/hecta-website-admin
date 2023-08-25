@@ -261,10 +261,11 @@
     max-width: 100%;
     overflow-x: auto;
 }
-.actions-list{
+
+.actions-list {
     background-color: #F4F4F4;
-    ;
 }
+
 /* Style for dropdown button */
 .dropdown-btn {
     border: 1px solid #d1d5db;
@@ -298,6 +299,43 @@
     cursor: pointer;
 }
 
+.eye {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    top: 214px;
+    left: 250px;
+    flex-shrink: 0;
+}
+
+.cards-color {
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+    box-shadow: 0px 2px 2px 0px rgba(29, 36, 60, 0.08);
+}
+
+.icon,
+gap-4 {
+    gap: 0.5rem;
+}
+
+.view-all {
+    color: #00BBBB;
+}
+
+.btn-view,
+table2 {
+    background-color: #00BBBB;
+    color: #fff;
+}
+.actions-list2 {
+    background-color: #fff;
+    border-radius: 4px;
+    border: #fff;
+}
 /* Add additional styling for the button on the left if needed */
 
 

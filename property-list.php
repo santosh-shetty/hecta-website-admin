@@ -1,16 +1,8 @@
-<!-- start sidebar section -->
+<!-- start header section -->
 <?php @include('common-layout/header.php') ?>
-<!-- end sidebar section -->
+<!-- end header section -->
 
 <body x-data="main" class="relative overflow-x-hidden font-nunito text-sm font-normal antialiased" :class="[ $store.app.sidebar ? 'toggle-sidebar' : '', $store.app.theme === 'dark' || $store.app.isDarkMode ?  'dark' : '', $store.app.menu, $store.app.layout,$store.app.rtlClass]">
-    <!-- sidebar menu overlay -->
-    <div x-cloak class="fixed inset-0 z-50 bg-[black]/60 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
-
-    <!-- start theme customizer section -->
-    <div x-data="customizer">
-        <div class="fixed inset-0 z-[51] hidden bg-[black]/60 px-4 transition-[display]" :class="{'!block': showCustomizer}" @click="showCustomizer = false"></div>
-    </div>
-    <!-- end theme customizer section -->
 
     <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
         <!-- start sidebar section -->
@@ -389,7 +381,7 @@
                                                         <td class="whitespace-nowrap">
                                                             <div class="flex gap-4 items-center">
                                                                 <button class="btn-primary viewBtn">
-                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                    <img src="assets/imagess/eye.svg" width="20px" />
                                                                 </button>
                                                                 <button class="btn-primary penBtn">
                                                                     <img src="assets/images/pen.svg" width="20px" />
@@ -427,7 +419,7 @@
                                                         <td class="whitespace-nowrap">
                                                             <div class="flex gap-4 items-center">
                                                                 <button class="btn-primary viewBtn">
-                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                    <img src="assets/imagess/eye.svg" width="20px" />
                                                                 </button>
                                                                 <button class="btn-primary penBtn">
                                                                     <img src="assets/images/pen.svg" width="20px" />
@@ -465,7 +457,7 @@
                                                         <td class="whitespace-nowrap">
                                                             <div class="flex gap-4 items-center">
                                                                 <button class="btn-primary viewBtn">
-                                                                    <img src="assets/images/eye.svg" width="20px" />
+                                                                    <img src="assets/imagess/eye.svg" width="20px" />
                                                                 </button>
                                                                 <button class="btn-primary penBtn">
                                                                     <img src="assets/images/pen.svg" width="20px" />
@@ -490,11 +482,12 @@
                                     </div>
                                 </template>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                <!-- 
+            </div>
+        </div>
+        <!-- 
                         <div class="fixed inset-0 z-[999] hidden overflow-y-auto bg-[black]/60 px-4" :class="{'!block':addTaskModal}">
                             <div class="flex min-h-screen items-center justify-center">
                                 <div x-show="addTaskModal" x-transition x-transition.duration.300 @click.outside="addTaskModal = false" class="panel my-8 w-[90%] max-w-lg overflow-hidden rounded-lg border-0 p-0 md:w-full">
@@ -570,9 +563,9 @@
                                 </div>
                             </div>
                         </div> -->
-            </div>
-        </div>
-        <!-- end main content section -->
+    </div>
+    </div>
+    <!-- end main content section -->
 
     </div>
 
