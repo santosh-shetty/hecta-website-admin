@@ -2,7 +2,7 @@
 <?php @include('common-layout/header.php') ?>
 <!-- end header section -->
 
-
+    
 <div class="main-container min-h-screen text-black dark:text-white-dark" :class="[$store.app.navbar]">
     <!-- start sidebar section -->
     <?php @include('common-layout/sidebar.php') ?>

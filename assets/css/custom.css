@@ -14,4 +14,329 @@
     cursor: pointer;
 }
 
+/* All Properties */
+
+.text-xl {
+    width: 84px;
+    height: 21px;
+    top: 80px;
+    left: 230px;
+
+}
+
+.all-properties {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.properties {
+    width: 100%;
+}
+
+.horizontal-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horizontal-list li {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-list li.divider {
+    margin: 0 10px;
+    color: #333;
+}
+
+.horizontal-list a {
+    text-decoration: none;
+}
+
+.btn-property {
+    background-color: #1D243C;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.color-element1 {
+    color: #1D243C;
+}
+
+.color-element2 {
+    color: #00BBBB;
+}
+
+.sf-properties {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.horizontal-list2 {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.search-icon {
+    width: 14.645833969116211px;
+    height: 14.645833969116211px;
+    top: 2.5px;
+    left: 2.5px;
+}
+
+.holder {
+    width: 275px;
+    height: 36px;
+    top: 161px;
+    left: 230px;
+    border-radius: 4px;
+    border: 1px;
+    color: #A0A0A0;
+}
+
+.placeholder {
+    width: 113px;
+    height: 16px;
+    top: 171px;
+    left: 278px;
+}
+
+.filter {
+    /* border: 1px solid #1D243C; */
+    border-radius: 4px;
+    color: #1D243C;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    top: 167px;
+    left: 837px;
+    padding: 0px 8.694165229797363px 0px 8.09397029876709px;
+    color: #1D243C;
+}
+
+.dropdown-btn {
+    border: 1px solid #1D243C;
+    border-radius: 8px;
+}
+
+.btn-filter {
+    background-color: #00BBBB;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.badge-outline-success {
+    width: 87px;
+    height: 32px;
+    top: 52px;
+    left: 1372px;
+    border-radius: 4px;
+    /* border: 1px; */
+    border: 1px solid #3BB143
+}
+
+.text {
+    padding: 5px;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.btn.btn-list {
+    margin: 2px;
+    background: #D7EEF0;
+    /* color: #000000; */
+    /* margin-bottom: auto; */
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.view {
+
+    width: 32px;
+    height: 32px;
+    top: 52px;
+    left: 1491px;
+    border-radius: 4px;
+    background-color: #00BBBB;
+}
+
+.viewBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #00BBBB;
+}
+
+
+.penBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ECAD47;
+}
+
+.menuBtn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #F44336;
+}
+
+
+.btn-view {
+    width: 58px;
+    height: 32px;
+    top: 52px;
+    left: 1714px;
+    border-radius: 4px;
+    background-color: #D7EEF0;
+}
+
+.ellipse {
+    width: 4px;
+    height: 4px;
+    top: 72px;
+    left: 1585px;
+    border: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.actions-list {
+    background-color: #F4F4F4;
+}
+
+/* Style for dropdown button */
+.dropdown-btn {
+    border: 1px solid #d1d5db;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #f9fafb;
+}
+
+.dropdown-btn:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Style for dropdown options */
+.dropdown-options ul {
+    border-radius: 4px;
+    min-width: 160px;
+    z-index: 10;
+}
+
+.dropdown-options li {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.dropdown-options li:hover {
+    background-color: #f9fafb;
+    cursor: pointer;
+}
+
+.eye {
+    margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    top: 214px;
+    left: 250px;
+    flex-shrink: 0;
+}
+
+.cards-color {
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #02AAB0 0%, #00CDAC 100%);
+    box-shadow: 0px 2px 2px 0px rgba(29, 36, 60, 0.08);
+}
+
+.icon,
+gap-4 {
+    gap: 0.5rem;
+}
+
+.view-all {
+    color: #00BBBB;
+}
+
+.btn-view,
+table2 {
+    background-color: #00BBBB;
+    color: #fff;
+}
+.actions-list2 {
+    background-color: #fff;
+    border-radius: 4px;
+    border: #fff;
+}
+/* Add additional styling for the button on the left if needed */
+
+
 /* End CSS for SEO Tag  */

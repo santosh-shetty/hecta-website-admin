@@ -66,10 +66,10 @@
                                 </div>
 
                             </div>
-   
-                           </div>
-   
-                           </div>
+
+                        </div>
+
+                    </div>
                     <!-- End Blog Information  -->
 
                     <!-- Start Category Description -->
@@ -81,13 +81,13 @@
                         <div class="form-group mb-5">
                             <!-- basic -->
                             <div id="editor">
-                              <!-- Text Here.. -->
+                                <!-- Text Here.. -->
                             </div>
 
                             <!-- script -->
                             <script>
                                 new Quill('#editor', {
-                                      theme: 'snow'
+                                    theme: 'snow'
                                 });
                                 var toolbar = quill.container.previousSibling;
                                 toolbar.querySelector('.ql-picker').setAttribute('title', 'Font Size');
@@ -119,8 +119,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="seoKeywords">SEO Keywords</label>
-                                    <input id="seoKeywords" type="text" placeholder="Enter SEO Keywords"
-                                        class="form-input" required />
+                                    <input id="seoKeywords" type="text" placeholder="Enter SEO Keywords" class="form-input" required />
                                     <div class="tag-list" id="tagList"></div>
                                 </div>
                             </div>
@@ -138,10 +137,10 @@
 </div>
 <!-- City Dropdown -->
 <script>
-    document.addEventListener("DOMContentLoaded", function (e) {
+    document.addEventListener("DOMContentLoaded", function(e) {
         // default
         var els = document.querySelectorAll(".selectize");
-        els.forEach(function (select) {
+        els.forEach(function(select) {
             NiceSelect.bind(select);
         });
     });
@@ -160,7 +159,6 @@
             }
         }));
     });
-
 </script>
 
 <!-- script for SEO tag  -->
@@ -168,7 +166,7 @@
     const tagInput = document.getElementById("seoKeywords");
     const tagList = document.getElementById("tagList");
 
-    tagInput.addEventListener("keydown", function (event) {
+    tagInput.addEventListener("keydown", function(event) {
         if (event.key === "Enter" || event.key === ",") {
             event.preventDefault();
             addTag(tagInput.value.trim());
@@ -183,7 +181,7 @@
         tagElement.classList.add("tag");
         tagElement.textContent = tagName;
 
-        tagElement.addEventListener("click", function () {
+        tagElement.addEventListener("click", function() {
             tagList.removeChild(tagElement);
         });
 
@@ -192,7 +190,6 @@
 
     const initialTags = [];
     initialTags.forEach((tag) => addTag(tag));
-
 </script>
 
 <!-- start sidebar section -->
@@ -216,7 +213,6 @@
         },
         multiple: true,
     });
-
 </script>
 
 <!-- Editor Script -->
@@ -236,5 +232,4 @@
     toolbar.querySelector('button.ql-clean').setAttribute('title', 'Clear Formatting');
     toolbar.querySelector('[value=ordered]').setAttribute('title', 'Ordered List');
     toolbar.querySelector('[value=bullet]').setAttribute('title', 'Bullet List');
-
 </script>
